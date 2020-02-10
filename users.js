@@ -20,7 +20,10 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<title>会員情報入力 - メルカリ スマホでかんたん フリマアプリ</title>
-		<meta name="description" content="CMで話題！フリマアプリ「メルカリ」は、スマホから誰でも簡単に売り買いが楽しめるフリマアプリです。購入時はクレジットカード・キャリア決済・コンビニ・銀行ATMで支払いでき、品物が届いてから出品者に入金される独自システムで安心です。"></meta>
+		<meta name="description" content="CMで話題！フリマアプリ「メルカリ」は、スマホから誰でも簡単に売り買いが楽しめるフリマアプリです。購入時はクレジットカード・キャリア決済・コンビニ・銀行ATMで支払いでき、品物が届いてから出品者に入金される独自システムで安心です。">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="canonical" href="https://www.mercari.com/jp/signup/registration/">
+		<link rel="canonical" href="https://www.mercari.com/jp/signup/registration/"></link>
 		</meta>
 	  </head>
 </html>
