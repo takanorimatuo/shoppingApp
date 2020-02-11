@@ -1,0 +1,99 @@
+@import 'config/colors';
+
+a {
+  text-decoration: none;
+  color: $black;
+}
+a:hover {
+  color: #faa02b
+}
+
+.toppage-primary-wrapper {
+  box-sizing: border-box;
+}
+
+.toppage-header-wrapper {
+  background-color: $white;
+}
+.toppage-header-box {
+  padding: 0 60px;
+  
+  &__header {
+    max-width: 1040px;
+    width: 100%;
+    min-height: 82px;
+    margin: 0 auto;
+    padding: 15px 0 0;
+
+    &__contents {
+      position: relative;
+      display: flex;
+      align-items: center;
+      &--furima-logo {
+        padding-bottom: 10px;
+        margin-right: 30px;
+        border-radius: 4px;
+      }
+      .toppage__search-box {
+        margin-left: auto;
+        width: 100%;
+        &__serach-form {
+          position: relative;
+          width: 100%;
+          display: flex;
+          margin-bottom: 5px;
+          box-sizing: border-box;
+            #search-box {
+              width: calc(100% - 50px);
+              height: 36px;
+              padding: 0 0 0 5px;
+            }
+            #search-btn {
+              height: 40px;
+              width: 39px;
+              position: absolute;
+              left: calc(100% - 41px);
+              border: 0;
+              cursor: pointer;
+              background-color: $light-green;
+              padding: 8px;
+                .fa-search {
+                  font-size: 20px;
+                  color: $white;
+                }
+            }
+          }
+      }
+    }
+  }
+  .header-list {
+    font-size: 14px;
+    display: flex;
+    margin-bottom: 10px;
+      &__left-lists-menu {
+        position: relative;
+        display: flex;
+          &__categories {
+            color: $black;
+            padding-right: 30px;
+          }
+          &__brands {
+            color: $black;
+            padding-right: 30px;
+          }
+      }
+      &__right-lists-menu {
+        margin-left: auto;
+        display: flex;
+        padding: 0 0 0 16px;
+          &__login {
+            
+          }
+          &__new {
+            padding: 0 0 0 16px;
+          }
+      }
+  }
+}
+
+
