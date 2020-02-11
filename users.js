@@ -23,7 +23,17 @@
 		<meta name="description" content="CMで話題！フリマアプリ「メルカリ」は、スマホから誰でも簡単に売り買いが楽しめるフリマアプリです。購入時はクレジットカード・キャリア決済・コンビニ・銀行ATMで支払いでき、品物が届いてから出品者に入金される独自システムで安心です。">
 		<meta name="format-detection" content="telephone=no">
 		<link rel="canonical" href="https://www.mercari.com/jp/signup/registration/">
-		<link rel="canonical" href="https://www.mercari.com/jp/signup/registration/"></link>
+		<link href="https://www.mercari.com/jp/signup/registration/" hreflang="ja" rel="alternate">
+		<link href="/jp/assets/css/app.jp.css?3986902459" rel="stylesheet">
+		<link rel="shortcut icon" href="//www-mercari-jp.akamaized.net/favicon.ico?73731125">
+		<link rel="apple-touch-icon" href="//www-mercari-jp.akamaized.net/apple-touch-icon.png?73731125">
+		<link rel="icon" type="image/png" href="//www-mercari-jp.akamaized.net/favicon-16x16.png?73731125" sizes="16x16">
+		<link rel="icon" type="image/png" href="//www-mercari-jp.akamaized.net/favicon-32x32.png?73731125" sizes="32x32">
+		<link rel="icon" type="image/png" href="//www-mercari-jp.akamaized.net/favicon-194x194.png?73731125" sizes="194x194">
+		<link rel="icon" type="image/png" href="//www-mercari-jp.akamaized.net/android-chrome-192x192.png?73731125" sizes="192x192">
+		<link rel="mask-icon" href="//www-mercari-jp.akamaized.net/safari-pinned-tab.svg?73731125" color="#ea352d">
+		<link rel="manifest" href="https://www.mercari.com/jp/manifest.json?73731125"></link>
+		</link>
 		</meta>
 	  </head>
 </html>
