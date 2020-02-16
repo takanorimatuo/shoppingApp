@@ -5,15 +5,17 @@
     &__main-image {
       width: 100%;
       height: 560px;
-      background-color: rgba(96, 101, 243, 0.667);
-      // background-image: url();
+      background-image: url(bg-mainVisual-pict_pc.jpg);
+      background-size: cover;
+      background-position: top center;
       position: relative;
       display: flex;
       align-items: center;
         &__content {
           max-width: 1280px;
           width: 100%;
-          margin: 0 auto;
+          height: 150px;
+          margin: 0 60px;
           padding: 35px 0 0 0;
             &__title {
               text-shadow: 0 0 5px rgba(0,0,0,0.4);
@@ -45,19 +47,20 @@
       padding: 60px 20px;
         &__title {
           text-align: center;
-          font-size: 26px;
+          font-size: 25px;
           font-weight: bold;
           margin-bottom: 25px;
           padding-bottom: 15px;
           position: relative;
-            &__line {
-              width: 70px;
-              height: 4px;
-              background-color: $light-green;
-              position: absolute;
-              bottom: -70px;
-              left: 47%;
-          }
+        }
+        &__title::after {
+          content: "";
+          width: 70px;
+          height: 4px;
+          background-color: $light-green;
+          position: absolute;
+          bottom: 0;
+          left: 46%;
         }
         &__reasons {
           text-align: center;
@@ -72,8 +75,259 @@
               display: flex;
               flex-direction: column;
               align-items: center;
-              &__
+                &-image {
+                  position: relative;
+                  margin-bottom: 20px;
+                    &__number {
+                      display: inline-block;
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      border-radius: 4%;
+                      font-size: 24px;
+                      font-weight: bold;
+                      text-align: center;
+                      margin: 0 5px 0 0;
+                      padding: 10px 20px;
+                      background-color: $light-green;
+                      color: $white;
+                    }
+                }
+                &__text {
+                  font-weight: bold;
+                  font-size: 23px;
+                  line-height: 50px;
+                  margin: 0 0 0 2px;
+                  text-align: center;
+                    span {
+                      color: $light-green;
+                  }
+                    &-coment {
+                      font-weight: normal;
+                      font-size: 18px;
+                      line-height: 1.5;
+                      margin: 16px 0 0;
+                      text-align: left;
+                    }
+                }
             }
+        }
+    }
+    &__middle-image {
+      height: 400px;
+      background-image: url(bg-topMiddleDl-pict.jpg);
+      background-size: cover;
+      background-position: bottom right;
+      position: relative;
+      display: flex;
+      align-items: center;
+        &__content {
+          text-align: left;
+          max-width: 1040px;
+          width: 100%;
+          margin: 0 auto;
+            &__title {
+              text-shadow: 0 0 5px rgba(0,0,0,0.4);
+              font-size: 27px;
+              line-height: 1.4;
+              color: $white;
+              font-weight: bold;
+            }
+            &__text {
+              text-shadow: 0 0 5px rgba(0,0,0,0.4);
+              font-size: 18px;
+              color: $white;
+              line-height: 1.5;
+              margin: 20px 0 30px;
+            }
+            &__install {
+              display: flex;
+                &__app-store {
+                  margin-right: 10px;
+                  width: 180px;
+                }
+                &__google-play {
+                  width: 180px;
+                }
+            }
+        }
+    }
+    &__middle-content {
+      padding: 60px 20px;
+      background-color: $white;
+        &__title {
+          text-align: center;
+          font-size: 25px;
+          font-weight: bold;
+          margin-bottom: 25px;
+          padding-bottom: 15px;
+          position: relative;
+        }
+        &__title::after {
+          content: "";
+          width: 70px;
+          height: 4px;
+          background-color: $light-green;
+          position: absolute;
+          bottom: 0;
+          left: 48%;
+        }
+        &__features {
+          max-width: 1040px;
+          width: 100%;
+          margin: 0 auto;
+          display: flex;
+            &__feature {
+              display: flex;
+              flex-direction: column;
+              width: 30%;
+              text-align: center;
+              padding: 0 20px;
+              margin: 0 auto;
+              &__image {
+                width: 70%;
+                margin: 0 auto;
+              }
+              &__text {
+                margin: 40px 0 10px;
+                font-size: 19px;
+                font-weight: bold;
+              }
+              &__detail {
+                margin: 0 0 40px;
+                font-size: 17px;
+                text-align: left;
+              }
+            }
+        }
+    }
+    &__pickup-category {
+      padding: 80px 0 0;
+      background-color: #f8f8f8;
+      height: 100%;
+        &__head {
+          text-align: center;
+          font-size: 28px;
+          font-weight: bold;
+        }
+        &__products {
+          margin: 0;
+          padding: 0;
+          &__product__title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: $light-green;
+          }
+          &__product__lists {
+            width: 780px;
+            display: flex;
+            margin: 26px auto;
+            justify-content: space-around;
+              &__list {
+                width: 220px;
+                display: inline-block;
+                float: left;
+                &--image {
+                  width: 220px;
+                  height: 150px;
+                  position: relative;
+                  margin: 0;
+                  background-color: $white;
+                }
+                &--data {
+                  background-color: $white;
+                  color: $black;
+                  padding: 16px;
+                  &__name {
+                    font-size: 16px;
+                    text-align: left;
+                  }
+                  &__price {
+                    font-size: 16px;
+                    ul {
+                      display: flex;
+                      align-items: center;
+                      justify-content: space-between;
+                      color: $black;
+                    }
+                    li {
+                      font-size: 16px;
+                    }
+                    p {
+                      font-size: 10px;
+                      text-align: left;
+                      color: $black;
+                    }
+                  }
+                }
+              }
+          }
+        }
+    }
+    &__pickup-bland {
+      padding: 80px 0 0;
+      background-color: #f8f8f8;
+      height: 100%;
+      padding-bottom: 80px;
+        &__head {
+          text-align: center;
+          font-size: 28px;
+          font-weight: bold;
+        }
+        &__products {
+          margin: 0;
+          padding: 0;
+          &__product__title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: $light-green;
+          }
+          &__product__lists {
+            width: 780px;
+            display: flex;
+            margin: 26px auto;
+            justify-content: space-around;
+              &__list {
+                width: 220px;
+                display: inline-block;
+                float: left;
+                &--image {
+                  width: 220px;
+                  height: 150px;
+                  position: relative;
+                  margin: 0;
+                  background-color: $white;
+                }
+                &--data {
+                  background-color: $white;
+                  color: $black;
+                  padding: 16px;
+                  &__name {
+                    font-size: 16px;
+                    text-align: left;
+                  }
+                  &__price {
+                    font-size: 16px;
+                    ul {
+                      display: flex;
+                      align-items: center;
+                      justify-content: space-between;
+                      color: $black;
+                    }
+                    li {
+                      font-size: 16px;
+                    }
+                    p {
+                      font-size: 10px;
+                      text-align: left;
+                      color: $black;
+                    }
+                  }
+                }
+              }
+          }
         }
     }
 }
