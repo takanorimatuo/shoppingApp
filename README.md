@@ -11,9 +11,6 @@
 |prefectures|string|
 |city|string|null: false|
 |address|string|null: false|
-|tel|integer|null: false|
-|image|text|
-|score|string|null: false|
 ### Association
 - has_many :prefectures
 - has_many :Product
