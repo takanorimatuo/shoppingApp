@@ -78,7 +78,6 @@
 |price|integer|null: false|
 |date|string|null: false|
 |text|string|null: false|
-|image|text|
 |score|integer|null: false|
 |send|integer|null: false|
 |burden|string|null: false|
