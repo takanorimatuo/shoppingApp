@@ -24,6 +24,8 @@
 |city|string|null: false|
 |address|string|null: false|
 |tel|string|
+|prefecture_id|integer|null: false, foregin_key: true|
+|user_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
 - belongs_to :prefecture
@@ -32,6 +34,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
+|user_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
 - has_many :addresses
