@@ -93,6 +93,7 @@
 - belongs_to :categories
 - belongs_to :prefecture
 - belongs_to :brand, optional: true
+- has_many :images
 
 ## categoriesテーブル
 |Column|Type|Options|
@@ -101,6 +102,14 @@
 |ancestry|string|null: index: true|
 ### Association
 - has many :products
+
+## imagesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|src|string|null: false|
+|product_id|integer|null: false, foregin_key: true|
+### Association
+- belongs_to :product
 
 
 
