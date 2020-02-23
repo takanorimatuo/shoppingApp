@@ -3,9 +3,10 @@
     .toppage__main__main-image
       .toppage__main__main-image__content
         .toppage__main__main-image__content__title 人生を変えるフリマアプリ
-        %p.toppage__main__main-image__content__text FURIMAはだれでもかんたんに出品・購入できる
-        %br/
-        フリマアプリです
+        %p.toppage__main__main-image__content__text
+          FURIMAはだれでもかんたんに出品・購入できる
+          %br
+          フリマアプリです
         .toppage__main__main-image__content__install
           .toppage__main__main-image__content__install__app-store
             = image_tag "app-store.svg", size: "180x54"
@@ -13,6 +14,143 @@
             = image_tag "google-play.svg", size: "180x54"
     .toppage__main__introduction
       .toppage__main__introduction__title FURIMAが選ばれる3つの理由
-      .toppage__main__introduction__title__line
       .toppage__main__introduction__reasons
         .toppage__main__introduction__reasons__reason
+          .toppage__main__introduction__reasons__reason-image
+            .toppage__main__introduction__reasons__reason-image__number 1
+            = image_tag "threeminutes.jpg", size: "295x295"
+          .toppage__main__introduction__reasons__reason__text
+            %span 3分
+            ですぐに出品
+            .toppage__main__introduction__reasons__reason__text-coment スマホで入力するだけで簡単に出品できる！
+        .toppage__main__introduction__reasons__reason
+          .toppage__main__introduction__reasons__reason-image
+            .toppage__main__introduction__reasons__reason-image__number 2
+            = image_tag "simple.jpg", size: "295x295"
+          .toppage__main__introduction__reasons__reason__text
+            %span シンプル
+            で使いやすい
+            .toppage__main__introduction__reasons__reason__text-coment めんどくさい入力は必要なく、検索も購入もスムーズ！
+        .toppage__main__introduction__reasons__reason
+          .toppage__main__introduction__reasons__reason-image
+            .toppage__main__introduction__reasons__reason-image__number 3
+            = image_tag "greatvalue.jpg", size: "295x295"
+          .toppage__main__introduction__reasons__reason__text
+            手数料
+            %span 業界最安
+            .toppage__main__introduction__reasons__reason__text-coment 最大3%でお得に出品&購入！
+    .toppage__main__middle-image
+      .toppage__main__middle-image__content
+        .toppage__main__middle-image__content__title 会員数日本一位
+        %p.toppage__main__middle-image__content__text
+          FURIMAは、フリマアプリで最も人気。
+          %br
+          出品・購入回数も業界最多です！
+          %br
+          ほしかったあの商品に出会えるかもしれません。
+        .toppage__main__middle-image__content__install
+          .toppage__main__middle-image__content__install__app-store
+            = image_tag "app-store.svg", size: "180x54"
+          .toppage__main__middle-image__content__install__google-play
+            = image_tag "google-play.svg", size: "180x54"
+    .toppage__main__middle-content
+      .toppage__main__middle-content__title FURIMAの特徴
+      .toppage__main__middle-content__features
+        .toppage__main__middle-content__features__feature
+          .toppage__main__middle-content__features__feature__image
+            = image_tag "easy.png", size: "244x333"
+          .toppage__main__middle-content__features__feature__text 簡単に売り買いできる
+          .toppage__main__middle-content__features__feature__detail スマホひとつで、いつでもどこでも簡単に出品・購入が可能！
+        .toppage__main__middle-content__features__feature
+          .toppage__main__middle-content__features__feature__image
+            = image_tag "speed.png", size: "244x333"
+          .toppage__main__middle-content__features__feature__text 売上金は即日振込みに対応
+          .toppage__main__middle-content__features__feature__detail 午前9時までに振込を依頼いただければ、翌日に指定の口座に入金いたします!
+        .toppage__main__middle-content__features__feature
+          .toppage__main__middle-content__features__feature__image
+            = image_tag "pay.png", size: "244x333"
+          .toppage__main__middle-content__features__feature__text 様々な支払いに対応
+          .toppage__main__middle-content__features__feature__detail お支払いは、クレジットカードだけでなく、ポイントや売上金など多彩な方法があります。
+    .toppage__main__pickup-category
+      .toppage__main__pickup-category__head ピックアップカテゴリー
+      .toppage__main__pickup-category__products
+        .toppage__main__pickup-category__products__product__title 新規投稿商品
+        .toppage__main__pickup-category__products__product__lists
+          .toppage__main__pickup-category__products__product__lists__list
+            .toppage__main__pickup-category__products__product__lists__list--image
+              = image_tag "product3.png", size: "220x150"
+            .toppage__main__pickup-category__products__product__lists__list--data
+              .toppage__main__pickup-category__products__product__lists__list--data__name product3
+              .toppage__main__pickup-category__products__product__lists__list--data__price
+                %ul
+                  %li 30000円
+                  %li
+                  %i.fa.fa-star 0
+                %p (税込)
+          .toppage__main__pickup-category__products__product__lists__list
+            .toppage__main__pickup-category__products__product__lists__list--image
+              = image_tag "product2.png", size: "220x150"
+            .toppage__main__pickup-category__products__product__lists__list--data
+              .toppage__main__pickup-category__products__product__lists__list--data__name product2
+              .toppage__main__pickup-category__products__product__lists__list--data__price
+                %ul
+                  %li 20000円
+                  %li
+                  %i.fa.fa-star 0
+                %p (税込)
+          .toppage__main__pickup-category__products__product__lists__list
+            .toppage__main__pickup-category__products__product__lists__list--image
+              = image_tag "product1.png", size: "220x150"
+            .toppage__main__pickup-category__products__product__lists__list--data
+              .toppage__main__pickup-category__products__product__lists__list--data__name product1
+              .toppage__main__pickup-category__products__product__lists__list--data__price
+                %ul
+                  %li 10000円
+                  %li
+                  %i.fa.fa-star 0
+                %p (税込)
+    .toppage__main__pickup-bland
+      .toppage__main__pickup-bland__head ピックアップブランド
+      .toppage__main__pickup-bland__products
+        .toppage__main__pickup-bland__products__product__title アーカイバ
+        .toppage__main__pickup-bland__products__product__lists
+          .toppage__main__pickup-bland__products__product__lists__list
+            .toppage__main__pickup-bland__products__product__lists__list--image
+              = image_tag "product3.png", size: "220x150"
+            .toppage__main__pickup-bland__products__product__lists__list--data
+              .toppage__main__pickup-bland__products__product__lists__list--data__name product3
+              .toppage__main__pickup-bland__products__product__lists__list--data__price
+                %ul
+                  %li 30000円
+                  %li
+                  %i.fa.fa-star 0
+                %p (税込)
+          .toppage__main__pickup-bland__products__product__lists__list
+            .toppage__main__pickup-bland__products__product__lists__list--image
+              = image_tag "product2.png", size: "220x150"
+            .toppage__main__pickup-bland__products__product__lists__list--data
+              .toppage__main__pickup-bland__products__product__lists__list--data__name product2
+              .toppage__main__pickup-bland__products__product__lists__list--data__price
+                %ul
+                  %li 20000円
+                  %li
+                  %i.fa.fa-star 0
+                %p (税込)
+          .toppage__main__pickup-bland__products__product__lists__list
+            .toppage__main__pickup-bland__products__product__lists__list--image
+              = image_tag "product1.png", size: "220x150"
+            .toppage__main__pickup-bland__products__product__lists__list--data
+              .toppage__main__pickup-bland__products__product__lists__list--data__name product1
+              .toppage__main__pickup-bland__products__product__lists__list--data__price
+                %ul
+                  %li 10000円
+                  %li
+                  %i.fa.fa-star 0
+                %p (税込)
+
+
+
+
+
+
+
