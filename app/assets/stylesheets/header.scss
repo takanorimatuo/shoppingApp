@@ -21,6 +21,7 @@ a:hover {
   &__header {
     max-width: 1040px;
     width: 100%;
+    min-height: 82px;
     margin: 0 auto;
     padding: 15px 0 0;
 
@@ -74,7 +75,7 @@ a:hover {
         display: flex;
           &__categories {
             color: $black;
-            padding-right: 45px;
+            padding-right: 30px;
           }
           &__brands {
             color: $black;
