@@ -7,4 +7,3 @@ class CreateUsersBanks < ActiveRecord::Migration[5.2]
     end
   end
 end
-number

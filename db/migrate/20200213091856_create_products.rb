@@ -8,11 +8,14 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.integer  :price, null: false
       t.string   :date, null: false
       t.string   :text, null: false
-      t.text     :image
       t.integer  :score, null: false
       t.integer  :send, null: false
       t.string   :burden, null: false
-      t.integer  :user_id, null: false, foreign_key: true
+      t.integer  :saler_id, null: false, foregin_key: true
+      t.integer  :buyer_id, foregin_key: true
+      t.integer  :category_id, null: false, foregin_key: true
+      t.integer  :brand_id, foregin_key: true
+      t.integer  :prefecture_id, null: false, foregin_key: true
       t.timestamps
     end
   end

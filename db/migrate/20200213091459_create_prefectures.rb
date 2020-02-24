@@ -1,11 +1,8 @@
 class CreatePrefectures < ActiveRecord::Migration[5.2]
   def change
-    create_table :prefectures do |t|
-      t.string   :city, null: false
-      t.string   :address, null: false
-      t.integer  :tel, null: false
-      t.text     :image
-      t.integer  :score, null: false
+    create_table :prefectures(active_hash) do |t|
+      t.string   :name, null: false
+      t.string   :user_id, null: false foreign_key: true
       t.timestamps
     end
   end

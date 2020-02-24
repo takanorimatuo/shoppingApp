@@ -30,7 +30,7 @@
 - belongs_to :user
 - belongs_to :prefecture
 
-## prefectures(active_hash)
+## prefectures(active_hash)テーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
@@ -44,7 +44,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
-|card_number|integer|null: false, foreign_key: true|f
+|card_number|integer|null: false, foreign_key: true|
 |code|string|null: false|
 |date|string|null: false|
 ### Association
