@@ -80,3 +80,10 @@ gem 'font-awesome-sass'
 gem 'carrierwave'
 gem 'fog-aws'
 gem 'devise'
+<<<<<<< HEAD
+=======
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog-aws'
+
+>>>>>>> master
