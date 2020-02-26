@@ -33,7 +33,7 @@
 ## prefectures(active_hash)テーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|prefecture_name|string|null: false|
 |user_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
@@ -54,7 +54,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
-|name|string|null: false|
+|bank_name|string|null: false|
 |branch|string|null: false|
 |number|integer|null: false|
 ### Association
@@ -71,7 +71,7 @@
 ## Productsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|product_name|string|null: false|
 |size|string|null: false|
 |brand|string|null: false|
 |status|string|null: false|
@@ -97,7 +97,7 @@
 ## categoriesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|category_name|string|null: false|
 |ancestry|string|null: index: true|
 ### Association
 - has many :products
