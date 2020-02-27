@@ -10,6 +10,7 @@
 |first_kana|string|null: false|
 |last_kana|string|null: false|
 |birth_day|date|null: false|
+|email|string|null: false|
 ### Association
 - has_many :Products
 - has_many :cards
