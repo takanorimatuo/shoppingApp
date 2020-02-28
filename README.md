@@ -3,13 +3,14 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|nickname|string|null: false|
+!-- |nickname|string|null: false|
 |password|string|null: false|
 |first_name|string|null: false|
 |last_name|string|null: false|
 |first_kana|string|null: false|
 |last_kana|string|null: false|
 |birth_day|date|null: false|
+|email|string|null: false|
 ### Association
 - has_many :Products
 - has_many :cards
@@ -20,10 +21,10 @@
 ## addressesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|address_number|string|null: false|
-|city|string|null: false|
+|address_number|string|null: false| -->
+|city|string|null: false| -->
 |address|string|null: false|
-|tel|string|
+|tel|string|null: false|
 |prefecture_id|integer|null: false, foregin_key: true|
 |user_id|integer|null: false, foreign_key: true|
 ### Association
