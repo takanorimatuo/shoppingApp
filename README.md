@@ -3,7 +3,7 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|nickname|string|null: false|
+!-- |nickname|string|null: false|
 |password|string|null: false|
 |first_name|string|null: false|
 |last_name|string|null: false|
@@ -21,10 +21,10 @@
 ## addressesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|address_number|string|null: false|
-|city|string|null: false|
+|address_number|string|null: false| -->
+|city|string|null: false| -->
 |address|string|null: false|
-|tel|string|
+|tel|string|null: false|
 |prefecture_id|integer|null: false, foregin_key: true|
 |user_id|integer|null: false, foreign_key: true|
 ### Association
