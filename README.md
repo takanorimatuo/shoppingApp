@@ -3,7 +3,7 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-!-- |nickname|string|null: false|
+|nickname|string|null: false|
 |password|string|null: false|
 |first_name|string|null: false|
 |last_name|string|null: false|
@@ -11,12 +11,23 @@
 |last_kana|string|null: false|
 |birth_day|date|null: false|
 |email|string|null: false|
+|address_id|integer|null: false|
+
 ### Association
 - has_many :Products
 - has_many :cards
 - has_many :banks
-- has_many :user_banks
 - has_many :addresses
+
+## prefecturesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|prefecture_id|integer|null: false|
+|user_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :user
+- has_many :addresses
+- has_many :products
 
 ## addressesテーブル
 |Column|Type|Options|
@@ -25,28 +36,18 @@
 |city|string|null: false| -->
 |address|string|null: false|
 |tel|string|null: false|
-|prefecture_id|integer|null: false, foregin_key: true|
 |user_id|integer|null: false, foreign_key: true|
+|prefecture_id|integer|null: false, foregin_key: true|
 ### Association
 - belongs_to :user
 - belongs_to :prefecture
-
-## prefectures(active_hash)テーブル
-|Column|Type|Options|
-|------|----|-------|
-|prefecture_name|string|null: false|
-|user_id|integer|null: false, foreign_key: true|
-### Association
-- belongs_to :user
-- has_many :addresses
-- has_many :products
 
 ## cardsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |card_number|integer|null: false, foreign_key: true|
-|code|string|null: false|
+|security_code|integer|null: false|
 |date|string|null: false|
 ### Association
 - belongs_to :user
@@ -57,15 +58,7 @@
 |user_id|integer|null: false, foreign_key: true|
 |bank_name|string|null: false|
 |branch|string|null: false|
-|number|integer|null: false|
-### Association
-- belongs_to :user
-
-## users_banksテーブル
-|Column|Type|Options|
-|------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|bank_id|integer|null: false, foreign_key: true|
+|account_number|integer|null: false|
 ### Association
 - belongs_to :user
 
@@ -82,13 +75,13 @@
 |score|integer|null: false|
 |send|integer|null: false|
 |burden|string|null: false|
-|saler_id|integer|null: false, foregin_key: true|
+|seller_id|integer|null: false, foregin_key: true|
 |buyer_id|integer|foregin_key: true|
 |category_id|integer|null: false, foregin_key: true|
 |brand_id|integer|foregin_key: true|
 |prefecture_id|integer|null: false, foregin_key: true|
 ### Association
-- belongs_to :saler, class_name: "User"
+- belongs_to :seller, class_name: "User"
 - belongs_to :buyer, class_name: "User"
 - belongs_to :categories
 - belongs_to :prefecture
@@ -99,7 +92,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |category_name|string|null: false|
-|ancestry|string|null: index: true|
+|ancestry|string|index: true|
 ### Association
 - has many :products
 
