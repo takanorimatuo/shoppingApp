@@ -11,7 +11,6 @@
 |last_kana|string|null: false|
 |birth_day|date|null: false|
 |email|string|null: false|
-|address_id|integer|null: false|
 
 ### Association
 - has_many :Products
