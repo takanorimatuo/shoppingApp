@@ -1,0 +1,25 @@
+%header.toppage-header-wrapper
+  .toppage-header-box
+    .toppage-header-box__header
+      .toppage-header-box__header__contents
+        = link_to root_path do
+          = image_tag "furima-logo.png", size: "140x41", class: 'toppage-header-box__header__contents--furima-logo'
+        .toppage__search-box
+          .toppage__search-box__serach-form
+            %form#search-form{action: "#", method:"get"}
+            %input#search-box{name: "search-box", placeholder: "キーワードから探す", type:"text"}/
+            %button#search-btn{type: "submit"}
+              %i.fas.fa-search
+          
+      .header-list
+        .header-list__left-lists-menu
+          .header-list__left-lists-menu__categories
+            =link_to "カテゴリー"
+          .header-list__left-lists-menu__brands
+            =link_to "ブランド"
+
+        .header-list__right-lists-menu
+          .header-list__right-lists-menu__login
+            =link_to "ログイン"
+          .header-list__right-lists-menu__new
+            =link_to "新規会員登録"
