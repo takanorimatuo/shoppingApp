@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  root to: 'sells#index'
+  devise_for :users
+  root to: "sells#index"
 end

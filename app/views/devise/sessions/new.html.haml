@@ -1,0 +1,22 @@
+.log-in
+  .lon-in__inner.clearfix
+    .log-in__inner--header
+      = image_tag "furima-logo.png", size: "140x41", class: 'toppage-header-box__header__contents--furima-logo'
+      %h1 ログイン
+    .log-in__inner--main
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        .field
+          .field-label
+            = f.label :email
+          .filed-input
+            = f.email_field :email, autofocus: true, autocomplete: "email"
+        .field
+          .field-label
+            = f.label :password
+          .field-input
+            = f.password_field :password, autocomplete: "current-password"
+        .actions
+          = f.submit "ログイン", class: "btn"
+        = render "devise/shared/links"
+
+= render "sells/footer"
