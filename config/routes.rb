@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  root to: 'sells#index'
+  root to: 'users#index'
   resources :mypage, only: [:index]
 end
