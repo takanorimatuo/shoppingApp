@@ -1,7 +1,8 @@
 .log-in
   .lon-in__inner.clearfix
     .log-in__inner--header
-      = image_tag "furima-logo.png", size: "140x41", class: 'toppage-header-box__header__contents--furima-logo'
+      = link_to root_path do
+        = image_tag "furima-logo.png", size: "140x41", class: 'toppage-header-box__header__contents--furima-logo'
       %h1 ログイン
     .log-in__inner--main
       = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
