@@ -18,6 +18,6 @@ class Prefecture < ActiveHash::Base
       {id: 46, name: '鹿児島県'}, {id: 47, name: '沖縄県'}
   ]
 
-  belongs_to :user, dependent: destory
+  belongs_to :user
   has_one :address
 end
