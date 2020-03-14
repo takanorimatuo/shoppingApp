@@ -9,5 +9,4 @@ class User < ApplicationRecord
   has_many :cards, dependent: :destroy
   has_many :products, dependent: :destroy
   accepts_nested_attributes_for :addresses
-  accepts_nested_attributes_for :prefectures
 end
