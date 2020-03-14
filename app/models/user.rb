@@ -4,11 +4,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :prefectures, dependent: destory
-  has_many :addresses, dependent: destory
-  has_many :banks, dependent: destory
-  has_many :cards, dependent: destory
-  has_many :products, dependent: destory
+  has_many :prefectures, dependent: :destroy
+  has_many :addresses, dependent: :destroy
+  has_many :banks, dependent: :destroy
+  has_many :cards, dependent: :destroy
+  has_many :products, dependent: :destroy
   accepts_nested_attributes_for :addresses
   accepts_nested_attributes_for :prefectures
 end

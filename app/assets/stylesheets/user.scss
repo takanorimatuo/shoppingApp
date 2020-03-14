@@ -1,6 +1,7 @@
 .sign_in {
   background-color: #eee;
   text-align: center;
+  height: 1150px;
   padding-top: 30px;
     &__inner--header {
       h1 {
@@ -11,20 +12,18 @@
     }
     &__inner--user_form {
       background-color: white;
-      height: 990px;
       width: 600px;
       margin: 0 auto;
       margin-top: 30px;
-      margin-bottom: 30px;
-      li {
+      &_name {
         display: inline-block;
       }
-      h6 {
-        padding-top: 20px;
-        font-size: 20px;
+        h6 {
+          padding-top: 20px;
+          font-size: 20px;
+        }
       }
     }
-}
 
 .required {
   background-color: red;

@@ -6,32 +6,33 @@
       %h1 新規会員登録
     .sign_in__inner--user_form
       = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-        %li.sign_in_user_name
-          .field
-            .field-label-name
-              %h6.name_input 姓(漢字)
-              %p.required 必須
-            .field-input
-              = f.text_field :first_name
-          .field
-            .field-label-name
-              %h6.name_input せい(ひらがな)
-              %p.required 必須
-            .field-input
-              = f.text_field :first_kana
-        %li.sign_in_user_kana
-          .field
-            .field-label-name
-              %h6.name_input 名(漢字)
-              %p.required 必須
-            .field-input
-              = f.text_field :last_name
-          .field
-            .field-label-name
-              %h6.name_input な(ひらがな)
-              %p.required 必須
-            .field-input
-              = f.text_field :last_kana
+        .sign_in__inner--user_form
+          .sign_in__inner--user_form_name
+            .field
+              .field-label-name
+                %h6.name_input 姓(漢字)
+                %p.required 必須
+              .field-input
+                = f.text_field :first_name
+            .field
+              .field-label-name
+                %h6.name_input せい(ひらがな)
+                %p.required 必須
+              .field-input
+                = f.text_field :first_kana
+          .sign_in__inner--user_form_name
+            .field
+              .field-label-name
+                %h6.name_input 名(漢字)
+                %p.required 必須
+              .field-input
+                = f.text_field :last_name
+            .field
+              .field-label-name
+                %h6.name_input な(ひらがな)
+                %p.required 必須
+              .field-input
+                = f.text_field :last_kana
         .field
           .field-label-birth
             %h6.nickname_input ニックネーム
@@ -66,4 +67,4 @@
         .actions
           = f.submit "会員登録", class: "btn"
           
-= render "sells/footer"
+= render "users/footer"
