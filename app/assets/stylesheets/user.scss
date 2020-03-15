@@ -1,13 +1,28 @@
 .sign_in {
   background-color: #eee;
   text-align: center;
-  height: 1150px;
+  height: 1210px;
   padding-top: 30px;
     &__inner--header {
       h1 {
         padding-bottom: 10px;
         font-size: 40px;
-        border-bottom: solid 2px rgb(104, 100, 100);
+      }
+    &_process {
+      border-bottom: solid 2px rgb(104, 100, 100);
+      p {
+        display: inline-block;
+        margin-bottom: 20px;
+        width: 8%;
+      }
+      &_red {
+        color: red;
+        font-size: 19px;
+        font-weight: bold;
+      }
+      &_gray {
+        color: gray;
+      }
       }
     }
     &__inner--user_form {
@@ -41,7 +56,7 @@
 
 .btn {
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   font-size: 30px;
   height: 50px;
   width: 200px;
