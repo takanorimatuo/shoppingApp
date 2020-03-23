@@ -1,9 +1,21 @@
 .logout-content {
   background-color: $white;
-  float: right;
-  width: 700px;
+  margin: 0 auto;
+  height: 500px; 
+  &_header {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 100px;
+  }
+  &_side {
+    float: left;
+    margin-left: 30px;
+  }
   &__main {
     padding: 64px 0;
+    margin: 0 auto;
+    width: 700px;
+    background-color: $pale-gray;
     &--btn {
       background: $light-green;
       border: 1px solid $light-green;
