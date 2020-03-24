@@ -1,0 +1,17 @@
+.toppage__main__pickup-category
+  .toppage__main__pickup-category__head ピックアップカテゴリー
+  .toppage__main__pickup-category__products
+    .toppage__main__pickup-category__products__product__title 新規投稿商品
+    .toppage__main__pickup-category__products__product__lists
+      - @products.each do |product|
+        .toppage__main__pickup-category__products__product__lists_item
+          .toppage__main__pickup-category__products__product__lists_item_image
+            = product.images.first.src
+          .toppage__main__pickup-category__products__product__lists_item_name
+            = product.product_name
+          .toppage__main__pickup-category__products__product__lists_item_price
+            = (product.price.to_s(:delimited) + "円")
+          %p.toppage__main__pickup-category__products__product__lists_item_price_tax
+            (税込)
+          
+      
