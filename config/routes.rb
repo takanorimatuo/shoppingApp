@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   resources :mypage, only: [:index, :show]
   resources :users, only: [:new]
   resources :addresses, except: [:index, :show]
+  resources :products
+
 end
