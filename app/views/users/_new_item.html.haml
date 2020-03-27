@@ -6,7 +6,7 @@
       - @products.each do |product|
         .toppage__main__pickup-category__products__product__lists_item
           .toppage__main__pickup-category__products__product__lists_item_image
-            = product.images.first.src
+            = image_tag product.images.first.src.url, class: "toppage__main__pickup-category__products__product__lists_item_image"
           .toppage__main__pickup-category__products__product__lists_item_name
             = product.product_name
           .toppage__main__pickup-category__products__product__lists_item_price
