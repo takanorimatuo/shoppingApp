@@ -8,14 +8,13 @@
             %span.required__label 必須
           %p 最大10枚までアップロードできます
           #image-box-1
-            .item-num-0#image-box__container
+            .sell-image_box-0#box
               = f.fields_for :images do |i|
-                .input-area
-                  = i.file_field :image, type: 'file', name: "item[images_attributes][][image_url]", value:"", style: "display:none", id:"img-file"
-                  %label{for: "img-file"}
+                .input-area 
+                  = i.file_field :src, type: 'file', name: "product[images_attributes][][src]", style: 'display:none', id: 'img-file'
+                  %label{for: 'img-file'}
                     %pre
-                      ドラッグアンドドロップ
-                      またはクリックしてファイルをアップロード
+                      クリックしてファイルをアップロード
       .product-screen__main__goods
         .product-screen__main__goods__name
           .product-screen__main__goods__name__label
@@ -54,7 +53,7 @@
             %label 配送料の負担
             %span.required__label 必須
         .product-screen__main__delivery__burden__serectform
-          = f.collection_select :delivery_chage_id, DeliveryCharge.all, :id, :name, { prompt: '選択してください' }, { required: ""}
+          = f.collection_select :delivery_charge_id, DeliveryCharge.all, :id, :name, { prompt: '選択してください' }, { required: ""}
         .product-screen__main__delivery__area
           .product-screen__main__delivery__area__label
             %label 配送元の地域
