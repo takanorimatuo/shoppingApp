@@ -211,25 +211,24 @@
             display: flex;
             margin: 26px auto;
             justify-content: space-around;
-              &__list {
+              &_item {
                 width: 220px;
                 display: inline-block;
-                &--image {
+                background-color: $white;
+                color: $black;
+                padding: 16px;
+                &_image {
                   width: 220px;
                   height: 150px;
                   position: relative;
                   margin: 0;
                   background-color: $white;
                 }
-                &--data {
-                  background-color: $white;
-                  color: $black;
-                  padding: 16px;
-                  &__name {
+                  &_name {
                     font-size: 16px;
                     text-align: left;
                   }
-                  &__price {
+                  &_price {
                     font-size: 16px;
                     ul {
                       display: flex;
@@ -240,7 +239,7 @@
                     li {
                       font-size: 16px;
                     }
-                    p {
+                    &_tax {
                       font-size: 10px;
                       text-align: left;
                       color: $black;
@@ -248,71 +247,69 @@
                   }
                 }
               }
+            }
           }
-        }
-    }
     &__pickup-bland {
       padding: 80px 0 0;
       background-color: #f8f8f8;
       height: 100%;
       padding-bottom: 80px;
-        &__head {
+      &__head {
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+      }
+      &__products {
+        margin: 0;
+        padding: 0;
+        &__product__title {
           text-align: center;
-          font-size: 28px;
+          font-size: 24px;
           font-weight: bold;
+          color: $light-green;
         }
-        &__products {
-          margin: 0;
-          padding: 0;
-          &__product__title {
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-            color: $light-green;
-          }
-          &__product__lists {
-            width: 780px;
-            display: flex;
-            margin: 26px auto;
-            justify-content: space-around;
-              &__list {
+        &__product__lists {
+          width: 780px;
+          display: flex;
+          margin: 26px auto;
+          justify-content: space-around;
+            &_item {
+              width: 220px;
+              display: inline-block;
+              background-color: $white;
+              color: $black;
+              padding: 16px;
+              &_image {
                 width: 220px;
-                display: inline-block;
-                &--image {
-                  width: 220px;
-                  height: 150px;
-                  position: relative;
-                  margin: 0;
-                  background-color: $white;
+                height: 150px;
+                position: relative;
+                margin: 0;
+                background-color: $white;
+              }
+                &_name {
+                  font-size: 16px;
+                  text-align: left;
                 }
-                &--data {
-                  background-color: $white;
-                  color: $black;
-                  padding: 16px;
-                  &__name {
-                    font-size: 16px;
-                    text-align: left;
+                &_price {
+                  font-size: 16px;
+                  ul {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    color: $black;
                   }
-                  &__price {
+                  li {
                     font-size: 16px;
-                    ul {
-                      display: flex;
-                      align-items: center;
-                      justify-content: space-between;
-                      color: $black;
-                    }
-                    li {
-                      font-size: 16px;
-                    }
-                    p {
-                      font-size: 10px;
-                      text-align: left;
-                      color: $black;
-                    }
+                  }
+                  &_tax {
+                    font-size: 10px;
+                    text-align: left;
+                    color: $black;
                   }
                 }
               }
+            }
           }
         }
-    }
-}
+      }
+
