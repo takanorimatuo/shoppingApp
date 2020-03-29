@@ -20,6 +20,19 @@ label {
     width: 100%;
     margin: auto;
     max-width: 700px;
+    .alert {
+      background:rgb(195, 255, 250);
+      border:2px solid $light-green;
+      font-weight:bold;
+      padding: 12px;
+      &__message {
+        color: $black;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 32px;
+      }
+    }
     &__content {
       padding: 40px;
       border-bottom: 1px solid $pale-gray;
@@ -34,18 +47,17 @@ label {
         }
       }
     }
-
-    .sell-image_box {
+    .sell-image_box{
       margin: 16px auto 0;
       line-height: 1.5;
       font-size: 14px;
     }
-    .input-area {
+    .input-area{
       height: 160px;
       min-height: 100%;
       position: relative;
-      margin: 5px;
-      label {
+      margin-top: 5px;
+      label{
         position: absolute;
         top: 50%;
         left: 0;
@@ -56,8 +68,8 @@ label {
         line-height: 1.5;
         transform: translate(0, -50%);
         height: 160px;
-        background-color: #eee;
-        border: dashed 1px #c0c0c0;
+        background: #EEEEEE;
+        border: dashed 1px #C0C0C0;
         cursor: pointer;
         width: 100%;
         display: block;
@@ -69,38 +81,64 @@ label {
     #image-box-1{
       display: flex;
       flex-wrap: wrap;
-      .item-num-0 {
+      .sell-image_box-0{
         width: 100%;
       }
-      .item-num-1 {
+      .sell-image_box-1{
         width: 491px;
       }
-      .item-num-2 {
+      .sell-image_box-2{
         width: 363px;
       }
-      .item-num-3 {
+      .sell-image_box-3{
         width: 234px;
       }
-      .item-num-4 {
+      .sell-image_box-4{
         width: 106px;
       }
-      .item-num-5 {
+      .sell-image_box-5{
         width: 100%;
       }
-      .item-num-6 {
+      .sell-image_box-6{
         width: 491px;
       }
-      .item-num-7 {
+      .sell-image_box-7{
         width: 363px;
       }
-      .item-num-8 {
+      .sell-image_box-8{
         width: 234px;
       }
-      .item-num-9 {
+      .sell-image_box-9{
         width: 106px;
       }
     }
-
+    .item-img{
+      background-color: #eee;
+      border: solid 1px #C0C0C0;
+      box-sizing: border-box;
+      margin-right: 5px;
+      margin-left: 5px;
+      margin-top: 10px;
+      .item-img_content_icon{
+        background-color: $black;
+        box-sizing: border-box;
+        margin: 5px 5px 0;
+      }
+    }
+    .item-img_operetion{
+      box-sizing: border-box;
+      margin-top: 5px;
+      display: flex;
+      justify-content: space-between;
+      &_delete{
+        padding: 10px 40px;
+        cursor: pointer;
+        color: $light-green;
+      }
+      &_delete:hover{
+        font-weight: bold;
+      }
+    }
     &__goods {
       padding: 40px;
       border-bottom: 1px solid $pale-gray;
