@@ -12,10 +12,12 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
+    @product.valid?
     if @product.images.present? && @product.save
       redirect_to root_path
     else
-      render :new
+      @product.images.build
+      render "new"
     end
   end
 

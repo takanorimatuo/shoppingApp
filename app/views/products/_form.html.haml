@@ -1,6 +1,12 @@
 .product-screen
   .product-screen__main
     = form_with model:@product, local:true do |f|
+      - if @product.errors.any? 
+        .alert
+          %ul.alert__message
+            - @product.errors.full_messages.each do |message| 
+              %li= message
+
       .product-screen__main__content
         .product-screen__main__content__exhibition-image
           .product-screen__main__content__exhibition-image__label
@@ -69,7 +75,7 @@
       .product-screen__main__price
         .product-screen__main__price__selling-price
           .product-screen__main__price__selling-price__label
-            %label 販売価格
+            %label 販売価格（¥300〜9,999,999）
             %span.required__label 必須
           .product-screen__main__price__selling-price__price-input
             ¥
