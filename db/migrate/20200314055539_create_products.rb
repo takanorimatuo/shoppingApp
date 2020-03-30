@@ -11,7 +11,7 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.integer    :prefecture_id,      null:false                         #都道府県
       t.integer    :delivery_day_id,    null:false                         #配送までの日数
       t.integer    :price,              null:false                         #価格
- 
+
       t.references :seller,       foreign_kye:{to_table: :users}
       t.references :buyer,        foreign_kye:{to_table: :users}
 

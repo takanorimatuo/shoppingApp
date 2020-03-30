@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :edit]
 
   def index
     @products = Product.includes(:images).order('created_at DESC').limit(10)
@@ -6,15 +7,17 @@ class ProductsController < ApplicationController
 
   def new
     @product = Product.new
-    @product.images.new
+    @images = @product.images.build
   end
 
   def create
     @product = Product.new(product_params)
-    if @product.save
+    @product.valid?
+    if @product.images.present? && @product.save
       redirect_to root_path
     else
-      render :new
+      @product.images.build
+      render "new"
     end
   end
 
@@ -28,9 +31,9 @@ class ProductsController < ApplicationController
   end
 
   private
-
   def product_params
-    params.require(:product).permit(:product_name, :text, :category_id, :brand, :status_id, :delivery_charge_id, :prefecture_id, :delivery_day_id, :price, images_attributes: [:src, :id])
+
+    params.require(:product).permit(:product_name, :text, :category_id, :brand, :status_id, :delivery_charge_id, :prefecture_id, :delivery_day_id, :price, images_attributes: [:src, :id]).merge(seller_id: current_user.id)
+
   end
-  
 end
