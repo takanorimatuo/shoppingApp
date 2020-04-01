@@ -112,17 +112,25 @@
   }
   &_action {
     background-color: $pale-gray;
-    padding-top: 30px;
-    padding-bottom: 40px;
-    &_btn {
-      text-align: center;
+    height: 250px;
+    &_back {
+      border-top: solid 2px gray;
+      padding-top: 60px;
+      padding-bottom: 20px;
+      background-color: white;
+      width: 900px;
+      height: 100px;
       margin: 0 auto;
-      background-color: $light-green;
-      color: white;
-      height: 60px;
-      width: 200px;
-      font-size: 40px;
-      border-radius: 0.5em;
+      &_btn {
+        text-align: center;
+        margin: 0 auto;
+        background-color: $light-green;
+        color: white;
+        height: 60px;
+        width: 200px;
+        font-size: 40px;
+        border-radius: 0.5em;
+      }
     }
   }
 }
