@@ -13,10 +13,18 @@
             %label 出品画像
             %span.required__label 必須
           %p 最大10枚までアップロードできます
+          = f.fields_for :images, local: true do |i|
+            %div
+              = i.file_field :src
           #image-box-1
-            .sell-image_box-0#box
-              = f.fields_for :images do |i|
-                = i.file_field :src, type: 'file', name: "product[images_attributes][][src]", id: 'img-file'
+            - @product.images.each do |image|
+              .item-img
+                .item-img_content
+                  .item-img_content_icon
+                    %img{height: "100", width: "100", src: "#{@images.src}", name: "product[images_attributes][#{@product.images.count}][src]"}
+                  .item-img_operetion
+                    .item-img_operetion_delete 削除
+
       .product-screen__main__goods
         .product-screen__main__goods__name
           .product-screen__main__goods__name__label
@@ -42,7 +50,7 @@
             %label ブランド
             %span.any__label 任意
         .product-screen__main__details__brand__textfield
-          = f.text_field :brand, placeholder: "例）パテックフィリップ", type: "text", value: ""
+          = f.text_field :brand, placeholder: "例）パテックフィリップ", type: "text"
         .product-screen__main__details__status
           .product-screen__main__details__status__label
             %label 商品の状態
@@ -71,12 +79,12 @@
       .product-screen__main__price
         .product-screen__main__price__selling-price
           .product-screen__main__price__selling-price__label
-            %label 販売価格（税込）
+            %label 販売価格（¥300〜9,999,999）
             %span.required__label 必須
           .product-screen__main__price__selling-price__price-input
             ¥
-            = f.number_field :price, placeholder: "300〜9,999,999", type: "number", value: ""
+            = f.number_field :price, placeholder: "0", type: "number"
         .product-screen__main__price__btn-box
-          = f.submit '出品する', class: 'selling-btn'
+          = f.submit '編集する', class: 'selling-btn'
           .product-screen__main__price__btn-box__back-btn
             = link_to 'もどる', root_path
