@@ -1,0 +1,49 @@
+.buy_page
+  .buy_page_header
+    = render "users/header"
+  .buy_page_item
+    .buy_page_item_topic
+      %h1 購入確認
+    .buy_page_item_products
+      .buy_page_item_products_image
+        = image_tag "カーネーション.jpg"
+      .buy_page_item_products_topic
+        %p 商品名
+      .buy_page_item_products_name
+        %p カーネーション
+      .buy_page_item_products_topic
+        %p 価格
+      .buy_page_item_products_price
+        %p 1,000円
+      .buy_page_item_products_topic
+        %p 送料
+      .buy_page_item_products_send
+        %p 送料込み
+    .buy_page_item_amount
+      .buy_page_item_amount_topic
+        %h2 請求金額
+      .buy_page_item_amount_price
+        %p 1,000円
+  .buy_page_person
+    .buy_page_person_card
+      .buy_page_person_card_topic
+        %h2 支払い方法
+      .buy_page_person_card_topic
+        %p クレジットカード番号
+      .buy_page_person_card_number
+        %p xxxxxxxxxxxx1234
+    .buy_page_person_address
+      .buy_page_person_address_topic
+        %h2 お届け先住所
+      .buy_page_person_address_number
+        %p 〒000-0000
+        .buy_page_person_address_number_area
+          %p 大阪府大阪市xx区xx町xx-xx
+  .buy_page_action
+    .buy_page_action_back
+      .buy_page_action_back_btn
+        %p 購入する
+  
+  = render "users/footer"
+    
+    

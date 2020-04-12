@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   resources :addresses, except: [:index, :show]
 
   resources :products
-
+  resources :buy, only: [:new, :create]
 end

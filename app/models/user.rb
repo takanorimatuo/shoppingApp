@@ -9,4 +9,6 @@ class User < ApplicationRecord
   has_many :cards, dependent: :destroy
   has_many :products, dependent: :destroy
   accepts_nested_attributes_for :addresses
+
+  validates :first_name, :last_name, :first_kana, :last_kana, :nickname, :birth_day, :email, :password, presence: true
 end
