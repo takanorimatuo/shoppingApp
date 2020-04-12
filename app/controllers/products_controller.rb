@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit]
+  before_action :set_product, only: [:edit, :update]
 
   def index
     @products = Product.includes(:images).order('created_at DESC').limit(10)
@@ -14,7 +15,6 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
     @product.valid?
     if @product.images.present? && @product.save
-      @product.update(seller_id: current_user.id)
       redirect_to root_path
     else
       @product.images.build
@@ -23,13 +23,12 @@ class ProductsController < ApplicationController
   end
 
   def edit
-    @product = Product.find(params[:id])
     @images = @product.images
     redirect_to root_path if @product.seller_id != current_user.id
   end
 
   def update
-    @product = Product.find(params[:id])
+    
     @image = Image.find(params[:id])
     if @product.update(product_params)
       redirect_to root_path, notice:""
@@ -39,6 +38,10 @@ class ProductsController < ApplicationController
   end
 
   def destroy
+  end
+
+  def set_product
+    @product = Product.find(params[:id])
   end
 
   private
