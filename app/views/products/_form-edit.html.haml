@@ -12,18 +12,21 @@
           .product-screen__main__content__exhibition-image__label
             %label 出品画像
             %span.required__label 必須
-          %p 最大10枚までアップロードできます
-          = f.fields_for :images, local: true do |i|
-            %div
-              = i.file_field :src
+          %p 画像の削除と差し替えができます
           #image-box-1
-            - @product.images.each do |image|
+            - @product.images.each_with_index do |image, i|
               .item-img
                 .item-img_content
                   .item-img_content_icon
-                    %img{height: "100", width: "100", src: "#{@images.src}", name: "product[images_attributes][#{@product.images.count}][src]"}
+                    %img{height: "100", width: "100", src: "#{image.src}", name: "product[images_attributes][#{@product.images.count}][src]"}
                   .item-img_operetion
-                    .item-img_operetion_delete 削除
+                    .item-img_operetion_delete{data: {index: i}} 削除
+                    .item-img_operetion_edit{data: {index: i}} 編集
+            .sell-image_box-0#box
+              = f.fields_for :images do |i|
+                = i.file_field :src
+                = i.check_box :_destroy, style: 'display:none'
+                %label{for: 'img-file', style: 'z-index: 1;'}
 
       .product-screen__main__goods
         .product-screen__main__goods__name

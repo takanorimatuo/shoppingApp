@@ -24,15 +24,15 @@ class ProductsController < ApplicationController
 
   def edit
     @product = Product.find(params[:id])
+    @images = @product.images
     redirect_to root_path if @product.seller_id != current_user.id
-    @images = @product.images.build
   end
 
   def update
     @product = Product.find(params[:id])
-    if product.seller_id == current_user.id
-      @product.update(product_params)
-      redirect_to root_path
+    @image = Image.find(params[:id])
+    if @product.update(product_params)
+      redirect_to root_path, notice:""
     else
       render :edit
     end
@@ -43,6 +43,6 @@ class ProductsController < ApplicationController
 
   private
   def product_params
-    params.require(:product).permit(:product_name, :text, :category_id, :brand, :status_id, :delivery_charge_id, :prefecture_id, :delivery_day_id, :price, images_attributes: [:src, :_destroy, :id]).merge(seller_id: current_user.id)
+    params.require(:product).permit(:product_name, :text, :category_id, :brand, :status_id, :delivery_charge_id, :prefecture_id, :delivery_day_id, :price, images_attributes: [:src, :id, :_destroy]).merge(seller_id: current_user.id)
   end
 end

@@ -6,7 +6,6 @@
           %ul.alert__message
             - @product.errors.full_messages.each do |message| 
               %li= message
-
       .product-screen__main__content
         .product-screen__main__content__exhibition-image
           .product-screen__main__content__exhibition-image__label
@@ -15,8 +14,12 @@
           %p 最大10枚までアップロードできます
           #image-box-1
             .sell-image_box-0#box
-              = f.fields_for :images do |i|
-                = i.file_field :src, type: 'file', name: "product[images_attributes][][src]", id: 'img-file'
+              .input-area
+                = f.label :src, class: 'product-screen__main__upload-label', id: 'upload-label' do
+                  = f.file_field :src, type: 'file', name: "product[images_attributes][][src]", style: 'display:none', id: 'img-file'
+                  %label{for: 'img-file'}
+                    %pre
+                      クリックしてファイルをアップロード
       .product-screen__main__goods
         .product-screen__main__goods__name
           .product-screen__main__goods__name__label
