@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  root to: 'sells#index'
-  get 'products' => 'products#index'
   devise_for :users
   root to: 'users#index'
   resources :mypage, only: [:index, :show]
