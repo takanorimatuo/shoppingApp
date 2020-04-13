@@ -1,0 +1,377 @@
+label {
+  font-size: 14px;
+  font-weight: bold;
+}
+.required__label {
+  margin-left: 8px;
+  font-size: 12px;
+  padding: 0 4px;
+  background-color: #ff0211;
+  color: $white;
+  border-radius: 2px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.product-screen {
+  background-color: $pale-gray;
+  &__main {
+    background-color: $white;
+    width: 100%;
+    margin: auto;
+    max-width: 700px;
+    .alert {
+      background:rgb(195, 255, 250);
+      border:2px solid $light-green;
+      font-weight:bold;
+      padding: 12px;
+      &__message {
+        color: $black;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 32px;
+      }
+    }
+    &__content {
+      padding: 40px;
+      border-bottom: 1px solid $pale-gray;
+      &__exhibition-image {
+        margin: 0;
+        &__label {
+          margin: 0;
+        }
+        p {
+          margin-top: 16px;
+          font-size: 14px;
+        }
+      }
+    }
+    .sell-image_box {
+      margin: 16px auto 0;
+      line-height: 1.5;
+      font-size: 14px;
+    }
+    .input-area {
+      height: 160px;
+      min-height: 100%;
+      position: relative;
+      margin-top: 5px;
+      label {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        word-wrap: break-word;
+        text-align: center;
+        font-size: 14px;
+        line-height: 1.5;
+        transform: translate(0, -50%);
+        height: 160px;
+        background: #EEEEEE;
+        border: dashed 1px #C0C0C0;
+        cursor: pointer;
+        width: 100%;
+        display: block;
+        pre {
+          padding-top: 50px;
+        }
+      }
+    }
+    #image-box-1 {
+      display: flex;
+      flex-wrap: wrap;
+      .sell-image_box-0 {
+        width: 100%;
+      }
+      .sell-image_box-1 {
+        width: 491px;
+      }
+      .sell-image_box-2 {
+        width: 363px;
+      }
+      .sell-image_box-3 {
+        width: 234px;
+      }
+      .sell-image_box-4 {
+        width: 106px;
+      }
+      .sell-image_box-5 {
+        width: 100%;
+      }
+      .sell-image_box-6 {
+        width: 491px;
+      }
+      .sell-image_box-7 {
+        width: 363px;
+      }
+      .sell-image_box-8 {
+        width: 234px;
+      }
+      .sell-image_box-9 {
+        width: 106px;
+      }
+    }
+    .item-img {
+      background-color: #eee;
+      border: solid 1px #C0C0C0;
+      box-sizing: border-box;
+      margin-right: 5px;
+      margin-left: 5px;
+      margin-top: 10px;
+      .item-img_content_icon {
+        background-color: $black;
+        box-sizing: border-box;
+        margin: 5px 5px 0;
+      }
+    }
+    .item-img_operetion {
+      box-sizing: border-box;
+      margin-top: 5px;
+      display: flex;
+      justify-content: space-between;
+      &_delete {
+        padding: 10px 10px;
+        cursor: pointer;
+        color: $light-green;
+      }
+      &_delete:hover {
+        font-weight: bold;
+      }
+      &_edit {
+        padding: 10px 10px;
+        cursor: pointer;
+        color: $light-green;
+      }
+      &_edit:hover {
+        font-weight: bold;
+      }
+    }
+    &__goods {
+      padding: 40px;
+      border-bottom: 1px solid $pale-gray;
+      &__name {
+        margin: 0;
+        &__label {
+          margin: 0;
+        }
+        &__textfield {
+          margin-top:18px;
+          input {
+            width: 625px;
+            height: 48px;
+            padding: 0 16px;
+            border: 1px solid $pale-gray;
+            border-radius: 4px;
+            box-sizing: border-box;
+          }
+        }
+      }
+      &__description {
+        margin-top:32px;
+        &__label {
+          margin: 0;
+        }
+        &__textarea {
+          margin-top:18px;
+          textarea {
+            width: 625px;
+            height: 150px;
+            padding: 16px;
+            border: 1px solid $pale-gray;
+            border-radius: 4px;
+            box-sizing: border-box;
+          }
+        }
+      }
+    }
+    &__details {
+      padding: 40px;
+      border-bottom: 1px solid $pale-gray;
+      &__categories {
+        margin: 0;
+        &__label {
+          margin: 0;
+        }
+        &__serectform {
+          margin-top:18px;
+          select {
+            width: 625px;
+            height: 48px;
+            padding: 0 16px;
+            background-color: $white;
+            border: 1px solid $pale-gray;
+            border-radius: 4px;
+            box-sizing: border-box;
+            cursor: pointer;
+          }
+        }
+      }
+      &__brand {
+        margin-top:32px;
+        &__label {
+          margin: 0;
+          .any__label {
+            margin-left: 8px;
+            font-size: 12px;
+            padding: 0 4px;
+            background-color: #aaa;
+            color: $white;
+            border-radius: 2px;
+            display: inline-block;
+            font-weight: bold;
+          }
+        }
+        &__textfield {
+          margin-top:18px;
+          input {
+            width: 625px;
+            height: 48px;
+            padding: 0 16px;
+            border: 1px solid $pale-gray;
+            border-radius: 4px;
+            box-sizing: border-box;
+          }
+        }
+      }
+      &__status {
+        margin-top:32px;
+        &__label {
+          margin: 0;
+        }
+        &__serectform {
+          margin-top:18px;
+          select {
+            width: 625px;
+            height: 48px;
+            padding: 0 16px;
+            background-color: $white;
+            border: 1px solid $pale-gray;
+            border-radius: 4px;
+            box-sizing: border-box;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    &__delivery {
+      padding: 40px;
+      border-bottom: 1px solid $pale-gray;
+      &__burden {
+        margin: 0;
+        &__label {
+          margin: 0;
+        }
+        &__serectform {
+          margin-top:18px;
+          select {
+            width: 625px;
+            height: 48px;
+            padding: 0 16px;
+            background-color: $white;
+            border: 1px solid $pale-gray;
+            border-radius: 4px;
+            box-sizing: border-box;
+            cursor: pointer;
+          }
+        }
+      }
+      &__area {
+        margin-top:32px;
+        &__label {
+          margin: 0;
+        }
+        &__serectform {
+          margin-top:18px;
+          select {
+            width: 625px;
+            height: 48px;
+            padding: 0 16px;
+            background-color: $white;
+            border: 1px solid $pale-gray;
+            border-radius: 4px;
+            box-sizing: border-box;
+            cursor: pointer;
+          }
+        }
+      }
+      &__days {
+        margin-top:32px;
+        &__label {
+          margin: 0;
+        }
+        &__serectform {
+          margin-top:18px;
+          select {
+            width: 625px;
+            height: 48px;
+            padding: 0 16px;
+            background-color: $white;
+            border: 1px solid $pale-gray;
+            border-radius: 4px;
+            box-sizing: border-box;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    &__price {
+      padding: 40px;
+      border-bottom: 1px solid $pale-gray;
+      &__selling-price {
+        -webkit-box-align: center;
+        align-items: center;
+        box-sizing: content-box;
+        display: flex;
+        &__label {
+          margin-right: auto;
+        }
+        &__price-input {
+          text-align: right;
+          input {
+            display: inline-block;
+            width: 300px;
+            height: 48px;
+            padding: 0 16px;
+            background-color: $white;
+            border: 1px solid $pale-gray;
+            border-radius: 4px;
+            box-sizing: border-box;
+          }
+        }
+      }
+      &__btn-box {
+        padding: 40px 24px;
+        text-align: center;
+        .selling-btn {
+          background: $light-green;
+          border: 1px solid $light-green;
+          color: $white;
+          border-radius: 4px;
+          margin-bottom: 24px;
+          width: 360px;
+          line-height: 48px;
+          font-size: 14px;
+          font-weight: bold;
+          text-align: center;
+          cursor: pointer;
+        }
+        &__back-btn {
+          background: #ccc;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          width: 360px;
+          margin: 24px auto 0;
+          line-height: 48px;
+          font-size: 14px;
+          font-weight: bold;
+          text-align: center;
+          cursor: pointer;
+        }
+        .product-screen__main__price__btn-box__back-btn a {
+          display: block;
+        }
+      }
+    }
+  }
+}

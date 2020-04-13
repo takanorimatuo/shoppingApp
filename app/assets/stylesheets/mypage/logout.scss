@@ -1,0 +1,37 @@
+.logout-content {
+  background-color: $white;
+  margin: 0 auto;
+  height: 500px; 
+  &_header {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 100px;
+  }
+  &_side {
+    float: left;
+    margin-left: 30px;
+  }
+  &__main {
+    padding: 64px 0;
+    margin: 0 auto;
+    width: 700px;
+    background-color: $pale-gray;
+    &--btn {
+      background: $light-green;
+      border: 1px solid $light-green;
+      max-width: 320px;
+      margin: 0 auto;
+      color: #fff;
+      display: block;
+      width: 100%;
+      line-height: 48px;
+      font-size: 14px;
+      text-align: center;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .logout-content__main--btn.submit_button a {
+      display: block;
+    }
+  }
+}

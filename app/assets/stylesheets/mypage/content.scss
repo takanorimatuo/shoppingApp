@@ -1,0 +1,30 @@
+.mypage-content {
+  float: right;
+  &__image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    &__user {
+      position: absolute;
+      padding: 20px;
+      text-align: center;
+      width: 660px;
+      &-icon {
+        height: 60px;
+        border-radius: 50%;
+      }
+      &__number {
+        margin: 8px 0 0;
+        &-score {
+          display: inline-block;
+          font-size: 14px;
+        }
+        &-exhibitions {
+          margin: 0 0 0 16px;
+          display: inline-block;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

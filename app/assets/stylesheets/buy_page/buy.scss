@@ -1,0 +1,136 @@
+.buy_page {
+  &_header {
+    border-bottom: solid 2px rgb(104, 100, 100);
+    padding-bottom: 20px;
+  }
+  .buy_page_item {
+    background-color: $pale-gray;
+    &_topic {
+      h1 {
+        font-size: 40px;
+        text-align: center;
+        padding-top: 20px;
+        margin-bottom: 20px;
+        color: red;
+      }
+    }
+    &_products {
+      background-color: white;
+      text-align: center;
+      width: 900px;
+      margin: 0 auto;
+      &_image {
+        padding-top: 40px;
+        padding-bottom: 30px;
+      }
+      &_topic {
+        font-size: 20px;
+        color: gray;
+      }
+      &_name {
+        font-size: 30px;
+      }
+      &_price {
+        font-size: 30px;
+        &_tax {
+          font-size: 16px;
+          
+        }
+      }
+      &_send {
+        font-size: 30px;
+        padding-bottom: 30px;
+      }
+    }
+    &_amount {
+      text-align: center;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      background-color: white;
+      width: 900px;
+      margin: 0 auto;
+      &_topic {
+        font-size: 20px;
+        color: gray;
+        border-bottom: solid 2px red;
+        width: 150px;
+        margin: 0 auto;
+      }
+      &_price {
+        padding-top: 10px;
+        font-size: 30px;
+      }
+    }
+  }
+  &_person {
+    text-align: center;
+    background-color: $pale-gray;
+    margin: 0 auto;
+    &_card {
+      border-top: solid 2px gray;
+      background-color: white;
+      width: 900px;
+      margin: 0 auto;
+      padding-top: 30px;
+      &_topic {
+        font-size: 15px;
+        color: gray;
+        h2 {
+          font-size: 20px;
+          padding-bottom: 10px;
+        }
+      }
+      &_number {
+        font-size: 20px;
+        padding-bottom: 30px;
+      }
+    }
+    &_address {
+      border-top: solid 2px gray;
+      background-color: white;
+      width: 900px;
+      margin: 0 auto;
+      text-align: center;
+      &_topic {
+        padding-top: 30px;
+        h2 {
+          font-size: 20px;
+          color: gray;
+          padding-bottom: 10px;
+          text-align: center;
+        }
+      }
+      &_number {
+        display: inline-block;
+        text-align: left;
+        &_area {
+        font-size: 20px;
+        padding-bottom: 40px;
+        }
+      }
+    }
+  }
+  &_action {
+    background-color: $pale-gray;
+    height: 250px;
+    &_back {
+      border-top: solid 2px gray;
+      padding-top: 60px;
+      padding-bottom: 20px;
+      background-color: white;
+      width: 900px;
+      height: 100px;
+      margin: 0 auto;
+      &_btn {
+        text-align: center;
+        margin: 0 auto;
+        background-color: $light-green;
+        color: white;
+        height: 60px;
+        width: 200px;
+        font-size: 40px;
+        border-radius: 0.5em;
+      }
+    }
+  }
+}

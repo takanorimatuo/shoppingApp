@@ -1,0 +1,17 @@
+.toppage__main__pickup-bland
+  .toppage__main__pickup-bland__head ピックアップアイテム
+  .toppage__main__pickup-bland__products
+    .toppage__main__pickup-bland__products__product__title アーカイブス
+    .toppage__main__pickup-bland__products__product__lists
+      - @category.each do |product|
+        .toppage__main__pickup-bland__products__product__lists_item
+          .toppage__main__pickup-bland__products__product__lists_item_image
+            = image_tag product.images.first.src.url, class: "toppage__main__pickup-category__products__product__lists_item_image"
+          .toppage__main__pickup-bland__products__product__lists_item_name
+            = product.product_name
+          .toppage__main__pickup-bland__products__product__lists_item_price
+            = (product.price.to_s(:delimited) + "円")
+          %p.toppage__main__pickup-bland__products__product__lists_item_price_tax
+            (税込)
+          
+      

@@ -66,7 +66,7 @@ a:hover {
   .header-list {
     font-size: 14px;
     display: flex;
-    margin-bottom: 10px;
+    padding: 0 0 10px;
       &__left-lists-menu {
         position: relative;
         display: flex;
@@ -84,7 +84,7 @@ a:hover {
         display: flex;
         padding: 0 0 0 16px;
           &__login {
-            
+            padding: 0 0 0 16px;
           }
           &__new {
             padding: 0 0 0 16px;

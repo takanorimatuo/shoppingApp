@@ -1,0 +1,9 @@
+.logout-content
+  .logout-content_header
+    = link_to root_path do
+      = image_tag "furima-logo.png", size: "140x41", class: 'toppage-header-box__header__contents--furima-logo'
+  .logout-content__main
+    .logout-content__main--btn.submit_button{href: "#"}
+      =link_to "ログアウト", destroy_user_session_path, method: :delete
+
+= render "users/footer"
