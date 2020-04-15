@@ -29,7 +29,7 @@
       .buy_page_person_name_topic
         %h2 購入者名
       .buy_page_perdon_name_person
-        = (@user.first_name + @user.last_name)
+        = (current_user.first_name + current_user.last_name)
     .buy_page_person_card
       .buy_page_person_card_topic
         %h2 支払い方法

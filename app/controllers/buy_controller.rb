@@ -3,7 +3,6 @@ class BuyController < ApplicationController
   before_action :set_product
 
   def new
-    @user = current_user
     @address = Address.find_by(user_id: current_user.id)
     Payjp.api_key =  Rails.application.credentials[:payjp][:secret_key]
       if current_user.cards.present?
