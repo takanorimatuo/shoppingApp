@@ -10,9 +10,11 @@
               = image_tag product.images.first.src.url, class: "toppage__main__pickup-category__products__product__lists_item_image"
             .toppage__main__pickup-category__products__product__lists_item_name
               = product.product_name
-            .toppage__main__pickup-category__products__product__lists_item_price
-              = (product.price.to_s(:delimited) + "円")
-            %p.toppage__main__pickup-category__products__product__lists_item_price_tax
-              (税込)
-          
-      
+            -if product.buyer_id.present?
+              %p.toppage__main__pickup-category__products__product__lists_item_sold
+                SOLD OUT
+            -else
+              .toppage__main__pickup-category__products__product__lists_item_price
+                = (product.price.to_s(:delimited) + "円")
+              %p.toppage__main__pickup-category__products__product__lists_item_price_tax
+                (税込)
