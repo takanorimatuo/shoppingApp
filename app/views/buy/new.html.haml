@@ -34,7 +34,7 @@
       .buy_page_person_card_topic
         %h2 支払い方法
       .buy_page_person_card_topic
-        -if @cards.blank?
+        -if @credit.blank?
           .buy_page_person_card_topic_error
             クレジットカード情報がありません。
             = link_to "クレジットカード登録へ", "/cards/new", class: "buy_page_person_card_topic_register"
@@ -57,7 +57,7 @@
               = (@address.prefecture.name + @address.city + @address.address + @address.building )
   .buy_page_action
     .buy_page_action_back
-      -if @address.blank? or @cards.blank?
+      -if @address.blank? or @credit.blank?
         .buy_page_action_back_error
           必要事項の入力が完了していません。
       -else

@@ -1,7 +1,9 @@
 class BuyController < ApplicationController
+
+  before_action :set_product
+
   def new
-    @product = Product.find(params[:product_id])
-    @user = User.find(current_user.id)
+    @user = current_user
     @address = Address.find_by(user_id: current_user.id)
     Payjp.api_key =  Rails.application.credentials[:payjp][:secret_key]
       if current_user.cards.present?
@@ -10,12 +12,11 @@ class BuyController < ApplicationController
         card_id = customer.default_card
         @card = customer.cards.retrieve(card_id)
       end
-    @cards = Card.find_by(user_id: current_user.id)
+    @credit = Card.find_by(user_id: current_user.id)
   end
 
   def create
-    @card = Card.where(user_id: current_user.id).first
-    @product = Product.find(params[:product_id])
+    @card = Card.find_by(user_id: current_user.id)
     Payjp.api_key=  Rails.application.credentials[:payjp][:secret_key]
     charge = Payjp::Charge.create(
       amount: @product.price,
@@ -28,8 +29,12 @@ class BuyController < ApplicationController
 
 
   private
-   def product_params
-    params.require(:product).permit(:product_name, :delivery_charge_id, :prefecture_id, :delivery_day_id, :price, images_attributes: [:src, :id]).merge(buyer_id: current_user.id)
-   end
+    def set_product
+      @product = Product.find(params[:product_id])
+    end
+
+    def product_params
+     params.require(:product).permit(:product_name, :delivery_charge_id, :prefecture_id, :delivery_day_id, :price, images_attributes: [:src, :id]).merge(buyer_id: current_user.id)
+    end
 
 end
