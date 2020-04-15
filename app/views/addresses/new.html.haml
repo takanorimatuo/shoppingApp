@@ -1,0 +1,48 @@
+.address
+  .address_header
+    = render 'users/header'
+  .address_main
+    .address_main_body
+      = form_with(model: @address, method: :post, local: true)  do |f|
+        .address_main_body_input
+          .address_main_body_input_address-number
+            .field
+              .field-label-address
+                %h6.address_input 郵便番号
+                %p.required 必須
+              .field-input
+                = f.text_field :address_number, placeholder: "ハイフンなし", minlength: "7", maxlength: "7", class: "value"
+            .field
+              .field-label-address
+                %h6.address_input 都道府県
+                %p.required 必須
+              .field-input
+                = f.collection_select :prefecture_id, Prefecture.all, :id, :name, { prompt: '選択してください' }, { required: ""}
+            .field
+              .field-label-address
+                %h6.address_input 市町村
+                %p.required 必須
+              .field-input
+                = f.text_field :city
+            .field
+              .field-label-address
+                %h6.address_input 番地
+                %p.required 必須
+              .field-input
+                = f.text_field :address
+            .field
+              .field-label-address
+                %h6.address_input ビル名・部屋番号
+                %p.required 必須
+              .field-input
+                = f.text_field :building
+            .field
+              .field-label-address
+                %h6.address_input 電話番号
+                %p.required 必須
+              .field-input
+                = f.text_field :tel, placeholder: "ハイフンなし"
+            .actions
+              = f.submit "登録する", class: "btn"
+  .address_footer
+    = render 'users/footer'
