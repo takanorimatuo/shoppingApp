@@ -1,0 +1,56 @@
+.product_main
+  .product_main_content
+    %h1.product_main_content__name
+      = @product.product_name
+    .product_main_content__image__box
+      %ul.product_main_content__image__box__inner
+        %li
+          = image_tag @product.images.first.src.url, class: "main__image"
+          %ul.product_main_content__image__box__inner__sub
+            - @product.images.each do |image|
+              %li
+                = image_tag image.src.url, class: "sub__image"
+    %span.product_main_content__price
+      = (@product.price.to_s(:delimited) + "円(税込)")
+    %h2.product_main_content_item_detail 
+      = @product.text
+    %table{border: "1", style: "border-collapse: collapse", class: "product_main_content_table"}
+      %tbody
+        %tr
+          %th 出品者
+          %td
+            = "#{@user.nickname}"
+        %tr
+          %th 
+            カテゴリー
+          %td
+            = "#{@product.category.name}"
+        %tr
+          %th ブランド
+          %td
+            = "#{@product.brand}"
+        %tr
+          %th 商品の状態
+          %td
+            = "#{@product.status.name}"
+        %tr
+          %th 配送料の負担
+          %td
+            = "#{@product.delivery_charge.name}"
+        %tr
+          %th 発送元の地域
+          %td
+            = "#{@product.prefecture.name}"
+        %tr
+          %th 発送日の目安
+          %td
+            = "#{@product.delivery_day.name}"
+    - if user_signed_in? && @product.seller_id == current_user.id
+      .product_main_content_edit-btn
+        = link_to "商品の編集", edit_product_path(@product.id), class: "edit-btn"
+      .product_main_content_delete-btn
+        = link_to "この商品を削除する", product_path(@product.id), method: :delete, class: "delete-btn"
+    - else
+      - if @product.buyer_id.blank?
+        .product_main_content_buy-btn
+          = link_to "購入画面に進む", "#", class: "buy-btn"

@@ -70,7 +70,7 @@
             %label 配送までの日数
             %span.required__label 必須
         .product-screen__main__delivery__days__serectform
-          = f.collection_select :delivery_day_id, DeliveryDays.all, :id, :name, { prompt: '選択してください' }, { required: ""}
+          = f.collection_select :delivery_day_id, DeliveryDay.all, :id, :name, { prompt: '選択してください' }, { required: ""}
       .product-screen__main__price
         .product-screen__main__price__selling-price
           .product-screen__main__price__selling-price__label

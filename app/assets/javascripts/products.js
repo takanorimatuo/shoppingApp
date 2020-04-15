@@ -72,4 +72,9 @@ $(function(){
     var index = $(this).data('index')
     $(`#product_images_attributes_${index}_src`).click();
   });
+
+  $('.sub__image').click(function () {
+    var $src = $(this).attr('src');
+    $('.main__image').attr('src', $src);
+  });
 });
