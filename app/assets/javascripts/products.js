@@ -2,7 +2,6 @@ $(function(){
 
   var dataBox = new DataTransfer();
   var file_box = document.querySelector('input[type = file]')
-  var DropArea = document.getElementById('image-box-1');
 
   // 以下画像ファイルを選択した時のイベント
   $('#img-file').change(function(){
@@ -31,6 +30,7 @@ $(function(){
                       </div>
                       <div class = 'item-img_operetion'>
                         <div class = 'item-img_operetion_delete'>削除</div>
+                        <div class = 'item-img_operetion_edit'>編集</div>
                       </div>
                     </div>`
                         
@@ -63,7 +63,13 @@ $(function(){
   })
 
   $('.item-img_operetion_delete').on('click', function(){
-    var btn = document.getElementById('check_box');
+    var index = $(this).data('index')
+    var btn = document.getElementById(`product_images_attributes_${index}__destroy`);
     btn.checked = true;
+  });
+
+  $('.item-img_operetion_edit').on('click', function(){
+    var index = $(this).data('index')
+    $(`#product_images_attributes_${index}_src`).click();
   });
 });
