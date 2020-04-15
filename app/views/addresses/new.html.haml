@@ -11,7 +11,7 @@
                 %h6.address_input 郵便番号
                 %p.required 必須
               .field-input
-                = f.text_field :address_number, placeholder: "ハイフンなし", class: "value"
+                = f.text_field :address_number, placeholder: "ハイフンなし", minlength: "7", maxlength: "7", class: "value"
             .field
               .field-label-address
                 %h6.address_input 都道府県

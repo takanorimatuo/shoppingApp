@@ -6,6 +6,11 @@ class AddressesController < ApplicationController
 
   def create
     @address = Address.create(address_params)
+      if @address.save
+        redirect_to root_path
+      else
+        render :new
+      end
   end
 
 private
