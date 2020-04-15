@@ -1,0 +1,88 @@
+.card {
+  text-align: center;
+    margin: 0 auto;
+  &_header {
+    border-bottom: solid 2px rgb(104, 100, 100);
+  }
+  &_body {
+    background-color: $pale-gray;
+    &_topic{
+      h2 {
+        font-size: 40px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+    }
+    &_main {
+      background-color: white;
+      width: 900px;
+      margin: 0 auto;
+      margin-bottom: 60px;
+      &_card {
+        &_topic {
+          padding-top: 20px;
+          padding-bottom: 5px;
+          p {
+          font-size: 15px;
+          color: gray;
+          }
+        }
+        &_number {
+          width: 300px;
+        }
+        &_security {
+          width: 90px;
+        }
+        &_date {
+          display: flex;
+          padding-bottom: 20px;
+          padding-left: 360px;
+          &_year {
+            width: 80px;
+          }
+          &_topic {
+            p {
+              color: gray;
+              margin: 0 10px;
+            }
+          }
+          &_month {
+            width: 60px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.card_create {
+  &_header {
+    border-bottom: solid 2px rgb(104, 100, 100);
+  }
+  &_body {
+    padding-top: 40px;
+    padding-bottom: 60px;
+    background-color: $pale-gray;
+    text-align: center;
+    &_main {
+      background-color: white;
+      width: 900px;
+      height: 300px;
+      margin: 0 auto;
+      &_topic {
+        h2 {
+          padding-top: 50px;
+          padding-bottom: 40px;
+          font-size: 40px;
+        }
+      }
+      .turn_btn {
+        background-color: $light-green;
+        color: white;
+        font-size: 20px;
+        padding: 20px 40px;
+        border-radius: 0.5em;
+      }
+    }
+  }
+}

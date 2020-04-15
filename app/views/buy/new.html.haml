@@ -6,43 +6,67 @@
       %h1 購入確認
     .buy_page_item_products
       .buy_page_item_products_image
-        = image_tag "カーネーション.jpg"
+        = image_tag @product.images.first.src.url, class: "buy_page_item_products_image"
       .buy_page_item_products_topic
         %p 商品名
       .buy_page_item_products_name
-        %p カーネーション
+        = @product.product_name
       .buy_page_item_products_topic
         %p 価格
       .buy_page_item_products_price
-        %p 1,000円
+        = (@product.price.to_s(:delimited) + "円")
       .buy_page_item_products_topic
         %p 送料
       .buy_page_item_products_send
-        %p 送料込み
+        = @product.delivery_charge.name
     .buy_page_item_amount
       .buy_page_item_amount_topic
         %h2 請求金額
       .buy_page_item_amount_price
-        %p 1,000円
+        = (@product.price.to_s(:delimited) + "円" + "+" + @product.delivery_charge.name)
   .buy_page_person
+    .buy_page_person_name
+      .buy_page_person_name_topic
+        %h2 購入者名
+      .buy_page_perdon_name_person
+        = (@user.first_name + @user.last_name)
     .buy_page_person_card
       .buy_page_person_card_topic
         %h2 支払い方法
       .buy_page_person_card_topic
-        %p クレジットカード番号
-      .buy_page_person_card_number
-        %p xxxxxxxxxxxx1234
+        -if @cards.blank?
+          .buy_page_person_card_topic_error
+            クレジットカード情報がありません。
+            = link_to "クレジットカード登録へ", "/cards/new", class: "buy_page_person_card_topic_register"
+        -else
+          .buy_page_person_card_topic_number
+            %p クレジットカード番号
+            .buy_page_person_card_topic_number_area
+              = ("xxxxxxxxxxxx" + @card.last4 )
     .buy_page_person_address
       .buy_page_person_address_topic
         %h2 お届け先住所
-      .buy_page_person_address_number
-        %p 〒000-0000
-        .buy_page_person_address_number_area
-          %p 大阪府大阪市xx区xx町xx-xx
+        -if @address.blank?
+          .buy_page_person_address_topic_error
+            お届け先住所が登録されていません。
+            =link_to "住所登録へ", "/addresses/new", class: ".buy_page_person_address_topic_register"
+        -else
+          .buy_page_person_address_number
+            = ("〒" + @address.address_number.to_s.insert(3, "-"))
+            .buy_page_person_address_number_area
+              = (@address.prefecture.name + @address.city + @address.address + @address.building )
   .buy_page_action
     .buy_page_action_back
-      .buy_page_action_back_btn
-        %p 購入する
+      -if @address.blank? or @cards.blank?
+        .buy_page_action_back_error
+          必要事項の入力が完了していません。
+      -else
+        -if @product.buyer_id.present?
+          .buy_page_action_back_sold
+            SOLD OUT
+        -else
+          .buy_page_action_back_btn
+            = link_to "購入する", product_buy_index_path(@product), method: :post
   
   = render "users/footer"
     

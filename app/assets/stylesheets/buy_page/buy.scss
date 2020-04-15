@@ -1,7 +1,9 @@
 .buy_page {
+  background-color: $pale-gray;
   &_header {
     border-bottom: solid 2px rgb(104, 100, 100);
     padding-bottom: 20px;
+    width: 100%;
   }
   .buy_page_item {
     background-color: $pale-gray;
@@ -63,9 +65,24 @@
     }
   }
   &_person {
+    border-top: solid 2px gray;
     text-align: center;
-    background-color: $pale-gray;
+    background-color: white;
     margin: 0 auto;
+    width: 900px;
+    &_name {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      font-size: 30px;
+      &_topic {
+        font-size: 15px;
+        color: gray;
+        h2 {
+          font-size: 20px;
+          padding-bottom: 10px;
+        }
+      }
+    }
     &_card {
       border-top: solid 2px gray;
       background-color: white;
@@ -78,6 +95,24 @@
         h2 {
           font-size: 20px;
           padding-bottom: 10px;
+        }
+        &_error {
+          padding-bottom: 30px;
+          color: black;
+          a {
+            color: red;
+          }
+        }
+        &_number {
+          p {
+            font-size: 15px;
+            color: black;
+          }
+          &_area{
+            font-size: 20px;
+            color: black;
+            padding-bottom: 40px;
+          }
         }
       }
       &_number {
@@ -99,10 +134,20 @@
           padding-bottom: 10px;
           text-align: center;
         }
+        &_error {
+          padding-bottom: 30px;
+          a {
+            color: red;
+          }
+        }
       }
       &_number {
         display: inline-block;
         text-align: left;
+        p {
+          font-size: 10px;
+          color: gray;
+        }
         &_area {
         font-size: 20px;
         padding-bottom: 40px;
@@ -121,6 +166,21 @@
       width: 900px;
       height: 100px;
       margin: 0 auto;
+      &_error {
+        text-align: center;
+        color: red;
+        font-size: 30px;
+      }
+      &_sold {
+        background-color: red;
+        color: white;
+        height: 60px;
+        width: 200px;
+        font-size: 40px;
+        border-radius: 0.5em;
+        text-align: center;
+        margin: 0 auto;
+      }
       &_btn {
         text-align: center;
         margin: 0 auto;

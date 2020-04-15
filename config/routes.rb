@@ -4,6 +4,14 @@ Rails.application.routes.draw do
   resources :mypage, only: [:index, :show]
   resources :users, only: [:new]
   resources :addresses, except: [:index, :show]
-  resources :products
-  resources :buy, only: [:new, :create]
+  resources :products do
+    resources :buy, only: [:new, :create]
+    collection do
+      get :buy
+    end
+    member do
+      post :pay
+    end
+  end
+  resources :cards, except: [:show]
 end

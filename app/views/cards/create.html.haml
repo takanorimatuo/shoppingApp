@@ -1,0 +1,9 @@
+.card_create
+  .card_create_header
+    = render 'users/header'
+  .card_create_body
+    .card_create_body_main
+      .card_create_body_main_topic
+        %h2 登録完了
+      = link_to "トップページに戻る", root_path, class: "turn_btn"
+  = render 'users/footer'
