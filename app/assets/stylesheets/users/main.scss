@@ -213,10 +213,14 @@
             justify-content: space-around;
               &_item {
                 width: 220px;
+                height: 220px;
                 display: inline-block;
                 background-color: $white;
                 color: $black;
                 padding: 16px;
+                &_sold {
+                  color: red;
+                }
                 &_image {
                   width: 220px;
                   height: 150px;
@@ -275,10 +279,14 @@
           justify-content: space-around;
             &_item {
               width: 220px;
+              height: 220px;
               display: inline-block;
               background-color: $white;
               color: $black;
               padding: 16px;
+              &_sold {
+                color: red;
+              }
               &_image {
                 width: 220px;
                 height: 150px;

@@ -22,6 +22,10 @@ class ProductsController < ApplicationController
     end
   end
 
+  def show
+    
+  end
+
   def edit
     @images = @product.images
     redirect_to root_path if @product.seller_id != current_user.id

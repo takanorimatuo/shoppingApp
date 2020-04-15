@@ -1,0 +1,25 @@
+.card
+  .card_header
+    = render "users/header"
+  .card_body
+    .card_body_topic
+      %h2 クレジットカード登録
+    .card_body_main
+      .card_body_main_card
+        = form_with(model: @card, method: :post, local:true, id: "card_token") do |f|
+          .card_body_main_card_topic
+            %p クレジットカード番号
+          = f.text_field :card_number, placeholder: "カード番号を入力してください", class: "card_body_main_card_number", id:"card_number"
+          .card_body_main_card_topic
+            %p セキュリティコード
+          = f.text_field :security_code, placeholder: "コード", class: "card_body_main_card_security", id: "cvc"
+          .card_body_main_card_topic
+            %p 有効期限
+          .card_body_main_card_date
+            = f.text_field :date_year, placeholder: "例：2000", class: "card_body_main_card_date_year", id: "exp_year"
+            .card_body_main_card_date_topic
+              %p /
+            = f.text_field :date_month, placeholder: "例：01", class: "card_body_main_card_date_month", id: "exp_month"
+          .card_body_main_card_action
+            = f.submit "登録", class: "btn", id: "token_submit"
+    = render 'users/footer'

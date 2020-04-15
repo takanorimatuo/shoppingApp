@@ -4,5 +4,5 @@ class Address < ApplicationRecord
 
 
   belongs_to :user
-  
+  validates :address_number, :address, :prefecture_id, :city, :building, :tel,  presence: true
 end
