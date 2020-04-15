@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit]
+  before_action :set_product, only: [:edit, :update]
 
   def index
     @products = Product.includes(:images).order('created_at DESC').limit(10)
@@ -17,7 +18,7 @@ class ProductsController < ApplicationController
       redirect_to root_path
     else
       @product.images.build
-      render "new"
+      render :new
     end
   end
 
@@ -26,18 +27,29 @@ class ProductsController < ApplicationController
   end
 
   def edit
+    @images = @product.images
+    redirect_to root_path if @product.seller_id != current_user.id
   end
 
   def update
+    
+    @image = Image.find(params[:id])
+    if @product.update(product_params)
+      redirect_to root_path, notice:""
+    else
+      render :edit
+    end
   end
 
   def destroy
   end
 
+  def set_product
+    @product = Product.find(params[:id])
+  end
+
   private
   def product_params
-
-    params.require(:product).permit(:product_name, :text, :category_id, :brand, :status_id, :delivery_charge_id, :prefecture_id, :delivery_day_id, :price, images_attributes: [:src, :id]).merge(seller_id: current_user.id)
-
+    params.require(:product).permit(:product_name, :text, :category_id, :brand, :status_id, :delivery_charge_id, :prefecture_id, :delivery_day_id, :price, images_attributes: [:src, :id, :_destroy]).merge(seller_id: current_user.id)
   end
 end

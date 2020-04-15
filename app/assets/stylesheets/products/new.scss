@@ -47,17 +47,17 @@ label {
         }
       }
     }
-    .sell-image_box{
+    .sell-image_box {
       margin: 16px auto 0;
       line-height: 1.5;
       font-size: 14px;
     }
-    .input-area{
+    .input-area {
       height: 160px;
       min-height: 100%;
       position: relative;
       margin-top: 5px;
-      label{
+      label {
         position: absolute;
         top: 50%;
         left: 0;
@@ -73,69 +73,77 @@ label {
         cursor: pointer;
         width: 100%;
         display: block;
-        pre{
+        pre {
           padding-top: 50px;
         }
       }
     }
-    #image-box-1{
+    #image-box-1 {
       display: flex;
       flex-wrap: wrap;
-      .sell-image_box-0{
+      .sell-image_box-0 {
         width: 100%;
       }
-      .sell-image_box-1{
+      .sell-image_box-1 {
         width: 491px;
       }
-      .sell-image_box-2{
+      .sell-image_box-2 {
         width: 363px;
       }
-      .sell-image_box-3{
+      .sell-image_box-3 {
         width: 234px;
       }
-      .sell-image_box-4{
+      .sell-image_box-4 {
         width: 106px;
       }
-      .sell-image_box-5{
+      .sell-image_box-5 {
         width: 100%;
       }
-      .sell-image_box-6{
+      .sell-image_box-6 {
         width: 491px;
       }
-      .sell-image_box-7{
+      .sell-image_box-7 {
         width: 363px;
       }
-      .sell-image_box-8{
+      .sell-image_box-8 {
         width: 234px;
       }
-      .sell-image_box-9{
+      .sell-image_box-9 {
         width: 106px;
       }
     }
-    .item-img{
+    .item-img {
       background-color: #eee;
       border: solid 1px #C0C0C0;
       box-sizing: border-box;
       margin-right: 5px;
       margin-left: 5px;
       margin-top: 10px;
-      .item-img_content_icon{
+      .item-img_content_icon {
         background-color: $black;
         box-sizing: border-box;
         margin: 5px 5px 0;
       }
     }
-    .item-img_operetion{
+    .item-img_operetion {
       box-sizing: border-box;
       margin-top: 5px;
       display: flex;
       justify-content: space-between;
-      &_delete{
-        padding: 10px 40px;
+      &_delete {
+        padding: 10px 10px;
         cursor: pointer;
         color: $light-green;
       }
-      &_delete:hover{
+      &_delete:hover {
+        font-weight: bold;
+      }
+      &_edit {
+        padding: 10px 10px;
+        cursor: pointer;
+        color: $light-green;
+      }
+      &_edit:hover {
         font-weight: bold;
       }
     }
