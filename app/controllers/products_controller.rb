@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit]
-  before_action :set_product, only: [:edit, :update, :show]
+  before_action :set_product, only: [:edit, :update, :show, :destroy]
 
   def index
     @products = Product.includes(:images).order('created_at DESC').limit(10)
@@ -46,6 +46,11 @@ class ProductsController < ApplicationController
 
 
   def destroy
+    if @product.seller_id == current_user.id && @product.destroy
+      redirect_to root_path
+    else
+      alert('削除できませんでした。')
+    end
   end
 
   def set_product
