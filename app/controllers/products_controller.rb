@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit]
-  before_action :set_product, only: [:edit, :update]
+  before_action :set_product, only: [:edit, :update, :show]
 
   def index
     @products = Product.includes(:images).order('created_at DESC').limit(10)
@@ -32,7 +32,6 @@ class ProductsController < ApplicationController
   end
 
   def update
-    
     @image = Image.find(params[:id])
     if @product.update(product_params)
       redirect_to root_path, notice:""
@@ -40,6 +39,11 @@ class ProductsController < ApplicationController
       render :edit
     end
   end
+
+  def show
+    @user = User.find(@product.seller_id)
+  end
+
 
   def destroy
   end

@@ -1,0 +1,126 @@
+.product_main {
+  background-color: $pale-gray;
+  text-align: center;
+  padding: 40px;
+  &_content{
+    padding: 24px 40px 40px;
+    width: 700px;
+    margin: 0 auto;
+    background-color:$white;
+    &__name {
+      color: $black;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      padding: 16px;
+    }
+    &__image__box {
+      margin: 15px 0 0;
+	    .product_main_content__image__box__inner {
+        background-color: $white;
+        .main__image{
+          width: 500px;
+          height: 350px;
+          object-fit: fill;
+        }
+        &__sub {
+          display: flex;
+          flex-wrap: wrap;
+          width: 500px;
+          margin-left: auto;
+          margin-right: auto;
+        .sub__image {
+          width: 100px;
+          height: 100px;
+          object-fit: fill;
+          cursor: pointer;
+        }
+        .sub__image:hover {
+          opacity: 0.5 ;
+        }
+        }
+      }
+    }
+    &__price{
+      font-size: 45px;
+      font-weight: bold;
+      padding: 16px;
+    }
+    &_item_detail {
+      font-size: 18px;
+      line-height: 1.5;
+      padding-bottom: 30px;
+    }
+    &_table {
+      width: 100%;
+      height:375px;
+      border-collapse: collapse;
+      padding: 10px;
+      th {
+        width: 30%;
+        background-color: $pale-gray;
+        padding: 8px;
+        border: 1px solid #dedede;
+        font-size: 14px;
+        text-align: center;
+      }
+      td {
+        width: 60%;
+        padding: 15px 15px;
+        border: 1px solid #dedede;
+        font-size: 14px;
+        text-align: left;
+      }
+    }
+    &_edit-btn {
+      background: $light-green;
+      border: 1px solid $light-green;
+      border-radius: 4px;
+      width: 360px;
+      margin: 50px auto 0;
+      line-height: 48px;
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+      cursor: pointer;
+      .edit-btn {
+        color: $white;
+        display: block;
+      }
+    }
+    &_delete-btn {
+      background: #ccc;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 360px;
+      margin: 50px auto 0;
+      line-height: 48px;
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+      cursor: pointer;
+      .delete-btn {
+        color: $black;
+        display: block;
+      }
+    }
+
+
+    &_buy-btn {
+      background: $light-green;
+      border: 1px solid $light-green;
+      border-radius: 4px;
+      width: 360px;
+      margin: 50px auto 0;
+      line-height: 48px;
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+      cursor: pointer;
+      .buy-btn {
+        color: $white;
+        display: block;
+      }
+    }
+  }
+}
