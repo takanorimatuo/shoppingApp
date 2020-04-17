@@ -26,7 +26,6 @@ class BuyController < ApplicationController
     redirect_to root_path
   end
 
-
   private
     def set_product
       @product = Product.find(params[:product_id])
@@ -35,5 +34,4 @@ class BuyController < ApplicationController
     def product_params
      params.require(:product).permit(:product_name, :delivery_charge_id, :prefecture_id, :delivery_day_id, :price, images_attributes: [:src, :id]).merge(buyer_id: current_user.id)
     end
-
 end

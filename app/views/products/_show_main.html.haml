@@ -53,4 +53,7 @@
     - else
       - if @product.buyer_id.blank?
         .product_main_content_buy-btn
-          = link_to "購入画面に進む", "#", class: "buy-btn"
+          = link_to "購入画面に進む", new_product_buy_path(@product.id), class: "buy-btn"
+      - else
+        .product_main_content_cannot-buy-btn
+          = link_to '売り切れました', "", class: 'cannot-buy-btn'
